@@ -104,3 +104,50 @@ function cekKode(){
   }
 }
 </script>
+<!-- FITUR 3: KUNCI OTOMATIS -->
+<div class="card">
+  <h3>🔒 Status Keamanan</h3>
+  <p id="statusKunci">Status: Aman ✅ | Salah: 0 / 3</p>
+  <p id="timerKunci" style="color:red;font-weight:900"></p>
+</div>
+
+<script>
+let salah = 0;
+let terkunci = false;
+
+// Kita timpa fungsi cekKode yang lama biar ada kuncinya
+let cekKodeLama = cekKode;
+function cekKode(){
+  if(terkunci){
+    alert("Akun terkunci! Tunggu dulu!");
+    return;
+  }
+  let isi = document.getElementById('otpInput').value;
+  if(isi === kode2fa && isi !== ""){
+    salah = 0;
+    document.getElementById('statusKunci').innerText = "Status: Aman ✅ | Salah: 0 / 3";
+    document.getElementById('hasil2fa').innerText = "✅ BERHASIL! 2FA BENAR!";
+    document.getElementById('hasil2fa').style.color = "#22c55e";
+  } else {
+    salah++;
+    document.getElementById('statusKunci').innerText = "Status: Waspada ⚠️ | Salah: " + salah + " / 3";
+    document.getElementById('hasil2fa').innerText = "❌ Kode salah! Sisa: " + (3 - salah);
+    document.getElementById('hasil2fa').style.color = "red";
+    if(salah >= 3){
+      terkunci = true;
+      let detik = 30;
+      document.getElementById('statusKunci').innerText = "Status: TERKUNCI 🔒";
+      let interval = setInterval(()=>{
+        document.getElementById('timerKunci').innerText = "Coba lagi dalam " + detik + " detik...";
+        detik--;
+        if(detik < 0){
+          clearInterval(interval);
+          terkunci = false; salah = 0;
+          document.getElementById('statusKunci').innerText = "Status: Aman ✅ | Salah: 0 / 3";
+          document.getElementById('timerKunci').innerText = "";
+        }
+      }, 1000);
+    }
+  }
+}
+</script>
