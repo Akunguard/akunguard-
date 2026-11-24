@@ -3,56 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AkunGuard</title>
+<title>AkunGuard - Mengamankan Akunmu</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:sans-serif;background:#020617;color:white;text-align:center;padding:30px 18px 60px;overflow-x:hidden}
-
-/* PEMBUKAAN - HILANG SENDIRI 2.5 DETIK */
-.splash{position:fixed;inset:0;background:#020617;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:999;animation:hilang .5s ease 2.2s forwards}
-.splash-icon{font-size:90px;animation:melayang 1.2s ease-in-out infinite}
-.splash-text{font-size:32px;font-weight:900;margin-top:10px}
-.splash-text span{color:#16a34a}
-.splash-kecil{opacity:.7;margin-top:8px}
+body{margin:0;background:#0f172a;color:white;font-family:Arial,sans-serif;overflow-x:hidden}
+.splash{position:fixed;inset:0;background:#0f172a;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:99;animation:hilang 1s ease 1.2s forwards}
+.splash .shield{font-size:80px}
+.splash h1{margin:10px 0 5px;font-size:32px}
+.splash p{margin:0;color:#94a3b8}
 @keyframes hilang{to{opacity:0;visibility:hidden}}
-@keyframes melayang{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-@keyframes naik{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-@keyframes denyut{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
-
-.logo{font-size:38px;font-weight:900;animation:naik .6s 2.5s ease both}
-.logo span{color:#16a34a}
-.logo-icon{display:inline-block;font-size:48px;animation:melayang 2s ease-in-out infinite}
-.sub{font-size:19px;line-height:1.5;margin:18px 0 22px;animation:naik .6s 2.7s ease both}
-.btn{display:block;background:#22c55e;color:white;padding:18px;border-radius:14px;text-decoration:none;font-weight:900;font-size:19px;animation:naik .6s 2.8s ease both, denyut 2s ease-in-out 3s infinite;box-shadow:0 8px 25px rgba(34,197,94,.4)}
-.card{background:#0f172a;text-align:left;padding:22px;border-radius:18px;margin:28px auto 0;max-width:520px;animation:naik .7s 3s ease both;border:1px solid #1e293b}
-.card h2{margin:0 0 14px;font-size:22px}
-.card p,.card li{font-size:17px;line-height:1.6}
-.card ul{padding-left:20px;margin:0}
-.card li{margin-bottom:10px}
-.badge{background:#14532d;color:#bbf7d0;padding:4px 10px;border-radius:20px;font-size:13px;font-weight:bold}
-.footer{margin-top:30px;opacity:.7;font-size:13px}.jalan{background:#22c55e;color:white;padding:10px;overflow:hidden;white-space:nowrap;font-weight:900;margin:0 -18px 20px}
-.jalan span{display:inline-block;animation:geser 8s linear infinite}
-@keyframes geser{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+.wrap{max-width:480px;margin:0 auto;padding:18px;text-align:center}
+.logo{font-size:28px;font-weight:900}
+.logo span{color:#22c55e}
+.tagline{color:#94a3b8;font-size:14px;margin:5px 0 20px}
+.jalan{background:#22c55e;color:white;padding:10px;overflow:hidden;white-space:nowrap;font-weight:900;margin:0 0 20px;border-radius:10px}
+.jalan span{display:inline-block;padding-left:100%;animation:geser 8s linear infinite}
+@keyframes geser{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+.card{background:#1e293b;padding:16px;border-radius:14px;margin-bottom:12px;text-align:left}
+.card h3{margin:0 0 6px;color:#22c55e}
+.card p{margin:0;color:#cbd5e1;font-size:14px;line-height:1.5}
+.btn{display:block;background:#22c55e;color:white;text-align:center;padding:14px;border-radius:12px;font-weight:900;text-decoration:none;margin:16px 0}
+.footer{color:#64748b;font-size:12px;padding:20px 0}
 </style>
 </head>
 <body>
-<div class="splash"><div class="splash-icon">🛡️</div><div class="splash-text">Akun<span>Guard</span></div><div class="splash-kecil">Mengamankan Akunmu...</div></div>
-  
-<div class="jalan"><span>🛡️ AkunGuard • Aman & Resmi • Tanpa Minta Password • Privasi Terjaga • Proses Transparan •</span></div>
-<div class="logo"><span class="logo-icon">🛡️</span><br>Akun<span>Guard</span></div>
-<div class="sub">Bantu Balikin Akun IG Ke-Hack | Aman & Resmi<br>Tanpa Hack Balik | Konsultasi Gratis</div>
-<a class="btn" href="https://wa.me/6281234567890">Chat WhatsApp Sekarang</a>
-<div class="card"><h2>✅ Layanan Kami</h2><ul>
-<li><b>1. Recovery Akun Ke-Hack</b> - 150rb - 350rb<br><span class="badge">PALING LARIS</span></li>
-<li><b>2. Pengamanan Akun (Shield)</b> - 75rb</li>
-<li><b>3. Konsultasi Gratis 10 Menit</b></li>
-<li><b>4. Recovery Akun Suspend / Disabled</b> - 200rb</li>
-<li><b>5. Cek Keamanan Akun</b> - GRATIS</li>
-<li><b>6. Ganti Email & Nomor Pemulihan</b> - 50rb</li>
-</ul></div>
-<div class="card"><h2>🔒 Aturan Emas Kami</h2><p>Kami <b>TIDAK PERNAH</b> minta password kamu.</p><p>✅ Resmi & Transparan<br>✅ Tanpa Hack Balik<br>✅ Privasi Dijaga</p></div>
-<div class="card"><h2>⭐ Cara Order</h2><p>1. Chat WhatsApp<br>2. Ceritain masalah kamu<br>3. Kami cek & kasih solusi<br>4. Akun balik, baru bayar</p></div>
-<a class="btn" style="margin-top:28px" href="https://wa.me/6281234567890">Chat WhatsApp Sekarang</a>
-<div class="footer">© 2026 AkunGuard - Aman & Resmi</div>
+
+<div class="splash">
+<div class="shield">🛡️</div>
+<h1>AkunGuard</h1>
+<p>Mengamankan Akunmu.</p>
+</div>
+
+<div class="wrap">
+<div class="logo">🛡️ Akun<span>Guard</span></div>
+<div class="tagline">Mengamankan Akunmu.</div>
+
+<div class="jalan"><span>AkunGuard • Perlindungan Akun • Aman & Terpercaya • AkunGuard • Perlindungan Akun • Aman & Terpercaya •</span></div>
+
+<div class="card"><h3>🛡️ Jasa Pengamanan Akun</h3><p>Lindungi akunmu dari hack, phising, dan pencurian. Kami bantu amankan sampai tuntas.</p></div>
+<div class="card"><h3>⚡ Proses Cepat</h3><p>Pengerjaan cepat, aman, dan bisa dipantau. Tanpa ribet, tanpa nunggu lama.</p></div>
+<div class="card"><h3>💬 Cara Order</h3><p>1. Chat Admin<br>2. Pilih Layanan<br>3. Akunmu Langsung Diamankan</p></div>
+
+<a class="btn" href="https://wa.me/6280000000000">💬 CHAT ADMIN SEKARANG</a>
+
+<div class="card"><h3>Kenapa Harus AkunGuard?</h3><p>✅ Aman & Terpercaya<br>✅ Admin Fast Respon<br>✅ Garansi Keamanan<br>✅ Harga Bersahabat</p></div>
+
+<div class="footer">© 2026 AkunGuard - Semua Hak Dilindungi</div>
+</div>
+
 </body>
 </html>
