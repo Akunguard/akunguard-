@@ -76,3 +76,31 @@ b.style.width=w+'%'; b.style.background=c; h.innerText=t;
 sr.innerText = s<3 ? 'Coba: Huruf Besar + Angka + Simbol, minimal 12 huruf' : 'Bagus! Jangan kasih password ini ke siapa-siapa ya!';
 });
 </script>
+<!-- FITUR 2FA - TEMPEL DI BARIS 79 -->
+<div class="card">
+  <h3>🔐 Verifikasi 2FA</h3>
+  <p style="font-size:13px;color:#94a3b8">Masukkan kode 6 digit yang dikirim ke kamu</p>
+  <input id="otpInput" placeholder="Masukkan 6 digit" maxlength="6" style="width:100%;padding:12px;margin-top:10px;border-radius:10px">
+  <button onclick="kirimKode()" style="width:100%;padding:12px;margin-top:10px;border-radius:10px;background:#22c55e;font-weight:900">KIRIM KODE 2FA</button>
+  <button onclick="cekKode()" style="width:100%;padding:12px;margin-top:8px;border-radius:10px;background:#0ea5e9;color:white;font-weight:900">VERIFIKASI ✅</button>
+  <p id="hasil2fa" style="font-weight:900;margin-top:10px"></p>
+</div>
+
+<script>
+let kode2fa = "";
+function kirimKode(){
+  kode2fa = Math.floor(100000 + Math.random()*900000).toString();
+  alert("Kode 2FA kamu (demo): " + kode2fa);
+  document.getElementById('hasil2fa').innerText = "Kode terkirim! Cek pop-up ya!";
+}
+function cekKode(){
+  let isi = document.getElementById('otpInput').value;
+  if(isi === kode2fa && isi !== ""){
+    document.getElementById('hasil2fa').innerText = "✅ BERHASIL! 2FA BENAR!";
+    document.getElementById('hasil2fa').style.color = "#22c55e";
+  } else {
+    document.getElementById('hasil2fa').innerText = "❌ Kode salah! Klik KIRIM KODE dulu!";
+    document.getElementById('hasil2fa').style.color = "red";
+  }
+}
+</script>
