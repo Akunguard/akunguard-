@@ -150,4 +150,12 @@ function cekKode(){
     }
   }
 }
+  function tambahLog(pesan){
+  let waktu = new Date().toLocaleTimeString();
+  let box = document.getElementById("logBox");
+  if(box.innerHTML.includes("Belum ada")){
+    box.innerHTML = "";
+  }
+  box.innerHTML += waktu + " - " + pesan + "<br>";
+}
 </script>
